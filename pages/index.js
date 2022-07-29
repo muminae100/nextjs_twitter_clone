@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import { Sidebar } from '../components';
 
 export default function Home() {
   return (
@@ -10,9 +10,17 @@ export default function Home() {
       <meta rel="icon" href="/favicon.ico" />
     </Head>
 
-    <h1 className="text-3xl font-bold underline bg-slate-300 p-2">
-      Hello world!
-    </h1>
+    <main className="flex min-h-screen max-w-7xl mx-auto">
+    {/* Sidebar */}
+    <Sidebar />
+
+    {/* Feed */}
+    
+    {/* Widgets */}
+
+    {/* Modal */}
+
+    </main>
     </>
   )
 }
