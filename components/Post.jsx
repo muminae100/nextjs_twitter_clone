@@ -9,10 +9,10 @@ const Post = ({ post }) => {
       {/* right section */}
       <div className="w-full">
         {/* header */}
-        <div className="flex items-center justify-between w-full bg-red-500">
+        <div className="flex items-center justify-between w-full">
           {/* post user info */}
           <div className="flex space-x-1 whitespace-nowrap items-center">
-            <h4 className="font-bold text-[15px] sm:text-[16px] hover:underline">{post.name.length > 10 ? `${post.name.slice(0, 11)}...` : post.name}</h4>
+            <h4 className="font-bold text-[15px] sm:text-[16px] hover:underline">{post.name.length > 10 ? `${post.name.slice(0, 8)}...` : post.name}</h4>
             <span className="text-sm sm:text-[15p]">@{post.username} - </span>
             <span className="text-sm sm:text-[15px] hover:underline">{post.timestamp}</span>
           </div>
