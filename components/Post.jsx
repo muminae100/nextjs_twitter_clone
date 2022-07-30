@@ -7,12 +7,12 @@ const Post = ({ post }) => {
       <img src={post.userImg} alt={post.username} className="h-11 w-11 rounded-full mr-4 object-cover" />
 
       {/* right section */}
-      <div className="flex-1">
+      <div className="w-full">
         {/* header */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between w-full bg-red-500">
           {/* post user info */}
           <div className="flex space-x-1 whitespace-nowrap items-center">
-            <h4 className="font-bold text-[15px] sm:text-[16px] hover:underline">{post.name}</h4>
+            <h4 className="font-bold text-[15px] sm:text-[16px] hover:underline">{post.name.length > 10 ? `${post.name.slice(0, 11)}...` : post.name}</h4>
             <span className="text-sm sm:text-[15p]">@{post.username} - </span>
             <span className="text-sm sm:text-[15px] hover:underline">{post.timestamp}</span>
           </div>
@@ -22,7 +22,7 @@ const Post = ({ post }) => {
         </div>
 
         {/* post text */}
-          <p className="text-gray-800 text-[15px sm:text-[16px]] mb-2">{post.text}</p>
+          <p className="text-gray-800 text-[15px sm:text-[16px]] mb-2 w-full">{post.text}</p>
         {/* post image */}
         <img src={post.postImg} alt="post image" className="rounded-2xl mr-2"/>
         {/* icons */}
